@@ -139,3 +139,4 @@ def handle_create_order(show_id, session_id, origin_data, default_audience_list,
     # 输出请求结果
     print("返回状态码:", response.status_code)
     print("返回内容:", response.text)
+    return response

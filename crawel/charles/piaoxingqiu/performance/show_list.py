@@ -28,7 +28,7 @@ def fetch_show_list():
         "bizFrontendCategoryId": PiaoConstans.bizFrontendCategoryId,
         "cityId": "BL1120",
         "lang": "zh",
-        "length": 10,
+        "length": 60,
         "offset": 0,
         "pageType": "ALL_PAGE",
         "sortType": "ATTENTION",

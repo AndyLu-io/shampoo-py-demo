@@ -44,4 +44,4 @@ def fetch_show_detail(show_id):
     print(f"响应内容: {response.text}")
 
 
-fetch_show_detail("6760f761e0fc440001fbb8ea")
+fetch_show_detail("67d6dc4499c2e800011bfa0f")

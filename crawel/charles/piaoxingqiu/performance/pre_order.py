@@ -49,14 +49,14 @@ def build_data(show_id, session_id, can_buy_seat_plan, num):
     return data
 
 
-def get_can_buy_seat_plan(seat_plan_list):
+def get_can_buy_seat_plan(seat_plan_list, num):
     for seat_plan in seat_plan_list:
-        if seat_plan.get("canBuyCount") > 0:
+        if seat_plan.get("canBuyCount") >= num:
             return seat_plan
     return None
 
 
-def handle_pre_order(show_id, session_id, num):
+def handle_pre_order(show_id, session_id, num, can_buy_seat_plan):
     # 请求的 URL
     url = "https://m.piaoxingqiu.com/cyy_gatewayapi/trade/buyer/order/v5/pre_order"
     params = {
@@ -79,9 +79,7 @@ def handle_pre_order(show_id, session_id, num):
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.47(0x18002f2c) NetType/WIFI Language/zh_CN",
         "Referer": "https://servicewechat.com/wxad60dd8123a62329/312/page-frame.html"
     }
-    seat_plan_list = fetch_seat_plan_list(show_id, session_id)
 
-    can_buy_seat_plan = get_can_buy_seat_plan(seat_plan_list)
     # 请求体
     data = build_data(show_id, session_id, can_buy_seat_plan, num)
 

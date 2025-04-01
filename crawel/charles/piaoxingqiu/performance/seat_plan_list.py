@@ -41,7 +41,7 @@ def fetch_seat_plan_list(show_id, session_id):
     # print("返回内容:", response.text)
 
 
-seatPlans = fetch_seat_plan_list('672c83e5077b340001a8744a', '672c83e5077b340001a87456')
+seatPlans = fetch_seat_plan_list('67d6dc4499c2e800011bfa0f', '67d6dcd982f5d6000104950b')
 for seatPlan in seatPlans:
     print(seatPlan['seatPlanId'])
     print(seatPlan)

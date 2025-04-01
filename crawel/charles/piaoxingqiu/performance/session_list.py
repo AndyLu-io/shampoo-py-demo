@@ -43,6 +43,6 @@ def fetch_session_list(show_id):
     # print("返回内容:", response.text)
 
 
-session_list = fetch_session_list('6760f761e0fc440001fbb8ea')
+session_list = fetch_session_list('67d6dc4499c2e800011bfa0f')
 for session in session_list:
     print(session['bizShowSessionId'])
